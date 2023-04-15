@@ -10,6 +10,8 @@ import { ErrorComponent } from './error/error.component';
 import { DashboardComponent } from './composant/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './admin/admin.component';
+import { StarterComponent } from './admin/starter/starter.component';
+import { TitreComponent } from './commun/titre/titre.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { AdminComponent } from './admin/admin.component';
     HeaderComponent,
     ErrorComponent,
     DashboardComponent,
-    AdminComponent
+    AdminComponent,
+    StarterComponent,
+    TitreComponent
   ],
   imports: [
     BrowserModule,
