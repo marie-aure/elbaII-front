@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { HelloServiceService } from 'src/app/service/hello-service.service';
 
 @Component({
@@ -8,10 +9,16 @@ import { HelloServiceService } from 'src/app/service/hello-service.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private hello:HelloServiceService) { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
-    this.hello.getHello().subscribe(res => {console.log(res)});
   }
 
+ toFamille(){
+  this.router.navigate(['famille']);
+ }
+
+ toFamille2(){
+  this.router.navigate(['famille2']);
+ }
 }

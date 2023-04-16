@@ -7,11 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainComponent } from './main/main.component';
 import { HeaderComponent } from './header/header.component';
 import { ErrorComponent } from './error/error.component';
-import { DashboardComponent } from './composant/dashboard/dashboard.component';
+import { DashboardComponent } from './main/composant/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './admin/admin.component';
 import { StarterComponent } from './admin/starter/starter.component';
 import { TitreComponent } from './commun/titre/titre.component';
+import { FamilleComponent } from './main/composant/famille/famille.component';
+import { Famille2Component } from './main/composant/famille2/famille2.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { TitreComponent } from './commun/titre/titre.component';
     DashboardComponent,
     AdminComponent,
     StarterComponent,
-    TitreComponent
+    TitreComponent,
+    FamilleComponent,
+    Famille2Component
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,7 @@ import { TitreComponent } from './commun/titre/titre.component';
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

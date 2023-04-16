@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, ActivatedRouteSnapshot, Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-titre',
@@ -7,7 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TitreComponent implements OnInit {
 
-  @Input() titre!:string;
+  @Input()
+  titre?:any;
 
   constructor() { }
 
