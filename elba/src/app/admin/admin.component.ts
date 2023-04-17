@@ -13,12 +13,21 @@ export class AdminComponent implements OnInit {
   constructor(private readonly router: Router, private readonly route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.titre = this.route.firstChild?.routeConfig?.title;
+
+    this.titre = this.getRouteTitle();
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.titre = this.route.firstChild?.routeConfig?.title;
       }
     });
+  }
+
+  getRouteTitle():any{
+    let currentRoute = this.route;
+    while(currentRoute.firstChild){
+      currentRoute = currentRoute.firstChild;
+    }
+    return currentRoute.routeConfig?.title;
   }
 
 }
