@@ -1,0 +1,15 @@
+<div class="rowContainer">
+    <div class="section">
+        <form [formGroup]="genererStarterForm" (ngSubmit)="genererStarterSubmit()">
+            <p>
+                <label for="nombreStarter">Nombre* : </label>
+                <mat-form-field appearance="legacy">
+                    <mat-label>Nombre</mat-label>
+                    <input id="nombreStarter" type="number" matInput formControlName="nombreStarter"
+                        placeholder="Nombre">
+                </mat-form-field>
+            </p>
+            <button type="submit" [disabled]="!genererStarterForm.valid">Générer</button>
+        </form>
+    </div>
+</div>
