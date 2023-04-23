@@ -82,82 +82,50 @@ p {
 }
 
 //forms 
-/* .mat-input-element {
-//    caret-color: hotpink!important;
-//	color: olive!important;
-	//background-color: olive!important;
-}
-
-.mat-focused {
-//	background-color: olive!important;
-//	color: olive!important;
-}
-
-.mat-form-field-label{
-//	color: olive!important;
-}
-
-.mat-form-field-outline-thick {
-//	background-color: hotpink!important;
-}
-
-
-.mat-primary {
-	//background-color: blue;
-	color:blue;
-} */
-
 label {
 	color: @fontColor;
 }
 
 .mat-focused .mat-form-field-label {
-	/*change color of label*/
-	color: white !important;
-	caret-color: white !important;
+	color: @fontColor !important;
+}
+
+.mat-form-field-label {
+	color: @fontColor !important;
 }
 
 .mat-form-field-underline {
-	/*change color of underline*/
 	background-color: @navbarBkgd !important;
 }
 
 .mat-form-field-ripple {
-	/*change color of underline when focused*/
 	background-color: @navbarBkgd !important;
 }
 
+.mat-focused .mat-form-field-required-marker {
+	color: @fontColor;
+}
+
 .mat-input-element {
-	caret-color: white !important;
+	caret-color: @fontColor !important;
 }
-
 .mat-form-field-required-marker {
-	color: hotpink;
+	color: @fontColor;
 }
 
-.mat-form-field-infix::after{	color: hotpink;
+.mat-form-field.mat-form-field-invalid .mat-form-field-label .mat-form-field-required-marker {
+	color: @fontColor;
 }
 
-
-.mat-icon.mat-accent{color:hotpink}
-
-.mat-placeholder-required  {
-	color:red;}
-
-.mat-form-field-required-marker  {
-	color:red;}
-
-.ng-tns-c65-0  {
-	color:red;}
-
-.ng-star-inserted {
-	color:red;}
-
-	.mat-focused .mat-form-field-required-marker
-{
-  color:hotpink;
+.mat-raised-button {
+	color: @fontColor;
+background-color: rgb(123, 123, 156);
 }
-.ng-invalid.ng-touched.mat-focused .mat-form-field-required-marker
-{
-  color:red
+
+.mat-raised-button:hover {
+	color: @fontColor;
+background-color: rgb(94, 94, 127);
+}
+.mat-raised-button.mat-button-disabled.mat-button-disabled {
+	//color: @fontColor;
 }

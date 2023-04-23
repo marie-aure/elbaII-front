@@ -15,6 +15,7 @@ import { StarterComponent } from './admin/starter/starter.component';
 import { TitreComponent } from './commun/titre/titre.component';
 import { FamilleComponent } from './main/composant/famille/famille.component';
 import { Famille2Component } from './main/composant/famille2/famille2.component';
+import { MatButtonModule } from '@angular/material/button'
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { Famille2Component } from './main/composant/famille2/famille2.component'
     BrowserAnimationsModule,
     FormsModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatButtonModule
   ],
   providers: [  ],
   bootstrap: [AppComponent]
