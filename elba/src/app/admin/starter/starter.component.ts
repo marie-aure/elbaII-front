@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { StarterService } from 'src/app/service/starter.service';
 
 @Component({
   selector: 'app-starter',
@@ -12,13 +13,13 @@ export class StarterComponent implements OnInit {
     nombreStarter: new FormControl('',Validators.required)
   });
 
-  constructor() { }
+  constructor(private starterService:StarterService) { }
 
   ngOnInit(): void {
   }
 
   genererStarterSubmit(){
-    console.log('je marche');
+    this.starterService.genererStarter().subscribe(res => console.log('je marche'));
   }
 
 }
