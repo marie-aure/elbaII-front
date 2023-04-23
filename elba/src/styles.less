@@ -21,7 +21,8 @@ h1 {
 	font-family: Verdana;
 	font-style: italic !important;
 	font-size: 60px;
-	background-image: linear-gradient(to right,rgba(255,255,255,0) 10%,rgba(255,255,255,0.3),rgba(255,255,255,0) 90%);
+	color: @fontColor;
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 90%);
 }
 
 hr {
@@ -29,18 +30,19 @@ hr {
 	padding: 0px;
 	height: 2px;
 	border: none;
-	background-image: linear-gradient(to right,rgba(255,255,255,0) 10%,@navbarBkgd ,rgba(255,255,255,0) 90%);
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 10%, @navbarBkgd , rgba(255, 255, 255, 0) 90%);
 }
 
-h2{
+h2 {
 	margin: 0px;
 	padding: 10px;
 	text-align: left;
-	font-family: Verdana; 
+	font-family: Verdana;
 	font-style: italic;
 	font-size: larger;
-	color: rgb(77, 77, 77);
+	color: @fontColor;
 }
+
 /*
 
 p {
@@ -68,20 +70,94 @@ p {
 }
 
 .stretch {
-	flex:1;
+	flex: 1;
 }
 
 // section
 .section {
 	background-color: rgba(255, 255, 255, 0.4);
-	margin : 5px;
+	margin: 5px;
 	padding: 10px;
 	border-radius: 5px;
 }
 
 //forms 
+/* .mat-input-element {
+//    caret-color: hotpink!important;
+//	color: olive!important;
+	//background-color: olive!important;
+}
+
+.mat-focused {
+//	background-color: olive!important;
+//	color: olive!important;
+}
+
+.mat-form-field-label{
+//	color: olive!important;
+}
+
+.mat-form-field-outline-thick {
+//	background-color: hotpink!important;
+}
+
+
+.mat-primary {
+	//background-color: blue;
+	color:blue;
+} */
+
+label {
+	color: @fontColor;
+}
+
+.mat-focused .mat-form-field-label {
+	/*change color of label*/
+	color: white !important;
+	caret-color: white !important;
+}
+
+.mat-form-field-underline {
+	/*change color of underline*/
+	background-color: @navbarBkgd !important;
+}
+
+.mat-form-field-ripple {
+	/*change color of underline when focused*/
+	background-color: @navbarBkgd !important;
+}
+
 .mat-input-element {
-    caret-color: hotpink!important;
-	color: hotpink!important;
-	background-color: hotpink!important;
+	caret-color: white !important;
+}
+
+.mat-form-field-required-marker {
+	color: hotpink;
+}
+
+.mat-form-field-infix::after{	color: hotpink;
+}
+
+
+.mat-icon.mat-accent{color:hotpink}
+
+.mat-placeholder-required  {
+	color:red;}
+
+.mat-form-field-required-marker  {
+	color:red;}
+
+.ng-tns-c65-0  {
+	color:red;}
+
+.ng-star-inserted {
+	color:red;}
+
+	.mat-focused .mat-form-field-required-marker
+{
+  color:hotpink;
+}
+.ng-invalid.ng-touched.mat-focused .mat-form-field-required-marker
+{
+  color:red
 }
