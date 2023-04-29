@@ -9,6 +9,6 @@ export class StarterService {
 
   constructor(private httpClient:HttpClient) { }
 
-  genererStarter():Observable<string[]>{
-    return this.httpClient.get<string[]>("http://localhost:8080/api/hello");}
+  genererStarter(nombre:number|undefined):Observable<string[]>{
+    return this.httpClient.get<string[]>(`http://localhost:8080/api/starter/generer/${nombre}` );}
 }

@@ -10,7 +10,7 @@ import { StarterService } from 'src/app/service/starter.service';
 export class StarterComponent implements OnInit {
 
   genererStarterForm = new FormGroup({
-    nombreStarter: new FormControl('',Validators.required)
+    nombreStarter: new FormControl<number>(0,Validators.required)
   });
 
   constructor(private starterService:StarterService) { }
@@ -19,7 +19,8 @@ export class StarterComponent implements OnInit {
   }
 
   genererStarterSubmit(){
-    this.starterService.genererStarter().subscribe(res => console.log('je marche'));
+    let nombre:number = this.genererStarterForm.value.nombreStarter || 100;
+    this.starterService.genererStarter(nombre).subscribe(res => console.log('je marche'));
   }
 
 }
