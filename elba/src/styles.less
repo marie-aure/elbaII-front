@@ -1,5 +1,6 @@
 @import "~@angular/material/prebuilt-themes/purple-green.css";
 @import "./variables.less";
+@import "./form.less";
 
 // default html elements
 html,
@@ -43,10 +44,8 @@ h2 {
 	color: @fontColor;
 }
 
-/*
-
 p {
-    margin: 0;-
+    margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
@@ -54,7 +53,7 @@ p {
 	line-height: 25px;
     vertical-align: baseline;
 	background: transparent;
-}*/
+}
 
 // flexbox
 .colContainer {
@@ -73,6 +72,10 @@ p {
 	flex: 1;
 }
 
+.wrap{
+	flex-wrap: wrap;
+}
+
 // section
 .section {
 	background-color: rgba(255, 255, 255, 0.4);
@@ -81,59 +84,36 @@ p {
 	border-radius: 5px;
 }
 
-//forms 
-label {
+.infoContainer {
+	border-radius: 5px;
+	border: solid @navbarBkgd 1px;
+	margin: 5px;
+	padding: 15px;
 	color: @fontColor;
 }
 
-//curseur
-.mat-input-element {
-	caret-color: white !important;
+.infoContainer:hover{
+	//background-color: rgb(248, 237, 237);
+	box-shadow: 1px 1px 1px @navbarBkgd;
+	border: solid 1px @navbarBkgd;
 }
 
-/* .mat-focused .mat-form-field-label {
-	color: @fontColor !important;
-	caret-color: white !important;
-
-} */
-
-//label dans et au dessus du champ
-.mat-form-field-label {
-	color: @fontColor !important;
+.infoContainer span{
+	display: block;
 }
 
-//ligne fine
-.mat-form-field-underline {
-	background-color: @navbarBkgd !important;
+.gridContainer{
+	display: flex;
+	justify-content: flex-start;
+	gap: 10px;
 }
 
-//ligne focus
-.mat-form-field-ripple {
-	background-color: @navbarBkgd !important;
+.labelContainer{
+	font-weight: bold;
+	text-align: end;
 }
 
-//* dans le champ
-.mat-form-field-required-marker {
-	color: @fontColor;
+router-outlet {
+	background-color: blue !important;
 }
 
-//* dans le champ invalide
-.mat-form-field.mat-form-field-invalid .mat-form-field-label .mat-form-field-required-marker {
-	color: @fontColor;
-}
-
-//* au dessus du champ
-.mat-focused .mat-form-field-required-marker {
-	color: @fontColor;
-}
-
-//button
-.mat-raised-button {
-	color: @fontColor;
-	background-color: rgb(123, 123, 156);
-}
-
-.mat-raised-button:hover {
-	color: @fontColor;
-	background-color: rgb(94, 94, 127);
-}
