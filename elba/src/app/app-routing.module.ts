@@ -10,8 +10,8 @@ import { Famille2Component } from './main/composant/famille2/famille2.component'
 const routes: Routes = [
   {path:'', redirectTo:'famille', pathMatch: 'full'},
   {
-    path: 'admin', component: AdminComponent, children: [
-      {path:'', redirectTo:'starter', pathMatch: 'full'},
+    path: 'admin', component: AdminComponent, title: "Administration", children: [
+      //{path:'', redirectTo:'starter', pathMatch: 'full'},
       { path: 'starter', component: StarterComponent, title: "Gestion des starters" }
     ]
   },

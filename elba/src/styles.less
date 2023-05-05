@@ -21,7 +21,8 @@ h1 {
 	font-family: Verdana;
 	font-style: italic !important;
 	font-size: 60px;
-	background-image: linear-gradient(to right,rgba(255,255,255,0) 10%,rgba(255,255,255,0.3),rgba(255,255,255,0) 90%);
+	color: @fontColor;
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 90%);
 }
 
 hr {
@@ -29,18 +30,20 @@ hr {
 	padding: 0px;
 	height: 2px;
 	border: none;
-	background-image: linear-gradient(to right,rgba(255,255,255,0) 10%,@navbarBkgd ,rgba(255,255,255,0) 90%);
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 10%, @navbarBkgd , rgba(255, 255, 255, 0) 90%);
 }
 
-/*h2{
+h2 {
 	margin: 0px;
 	padding: 10px;
 	text-align: left;
-	font-family: Verdana; 
+	font-family: Verdana;
 	font-style: italic;
 	font-size: larger;
-	color: rgb(77, 77, 77);
+	color: @fontColor;
 }
+
+/*
 
 p {
     margin: 0;-
@@ -67,9 +70,70 @@ p {
 }
 
 .stretch {
-	flex:1;
+	flex: 1;
 }
 
+// section
+.section {
+	background-color: rgba(255, 255, 255, 0.4);
+	margin: 5px;
+	padding: 10px;
+	border-radius: 5px;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+//forms 
+label {
+	color: @fontColor;
+}
+
+//curseur
+.mat-input-element {
+	caret-color: white !important;
+}
+
+/* .mat-focused .mat-form-field-label {
+	color: @fontColor !important;
+	caret-color: white !important;
+
+} */
+
+//label dans et au dessus du champ
+.mat-form-field-label {
+	color: @fontColor !important;
+}
+
+//ligne fine
+.mat-form-field-underline {
+	background-color: @navbarBkgd !important;
+}
+
+//ligne focus
+.mat-form-field-ripple {
+	background-color: @navbarBkgd !important;
+}
+
+//* dans le champ
+.mat-form-field-required-marker {
+	color: @fontColor;
+}
+
+//* dans le champ invalide
+.mat-form-field.mat-form-field-invalid .mat-form-field-label .mat-form-field-required-marker {
+	color: @fontColor;
+}
+
+//* au dessus du champ
+.mat-focused .mat-form-field-required-marker {
+	color: @fontColor;
+}
+
+//button
+.mat-raised-button {
+	color: @fontColor;
+	background-color: rgb(123, 123, 156);
+}
+
+.mat-raised-button:hover {
+	color: @fontColor;
+	background-color: rgb(94, 94, 127);
+}
