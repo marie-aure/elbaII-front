@@ -1,17 +1,26 @@
+@import "../../../variables.less";
 
-
-.separator{
+.scrollContainer {
     margin-top: 15px;
+    height: 100%;
+    overflow: auto;
 }
 
 .simContainer {
-    flex: 0 0 400px; 
+    flex: 0 0 350px;
 }
 
-.scroll {
-    overflow-y: scroll;
-}
-
-.fullHeight{
+.fullHeight {
     height: 100%;
+}
+
+.scrollItem {
+    height: 0;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+
+.wrap{
+    flex-wrap: wrap;
+    width: 100%;
 }

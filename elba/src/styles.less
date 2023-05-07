@@ -69,12 +69,9 @@ p {
 }
 
 .stretch {
-	flex: 1;
+	flex: 1 1;
 }
 
-.wrap{
-	flex-wrap: wrap;
-}
 
 // section
 .section {
@@ -86,16 +83,18 @@ p {
 
 .infoContainer {
 	border-radius: 5px;
-	border: solid @navbarBkgd 1px;
+	border: solid @navbarBkgd 2px;
 	margin: 5px;
 	padding: 15px;
 	color: @fontColor;
+	background-color: @composantBkgd;
 }
 
 .infoContainer:hover{
 	//background-color: rgb(248, 237, 237);
-	box-shadow: 1px 1px 1px @navbarBkgd;
-	border: solid 1px @navbarBkgd;
+	box-shadow: 1px 1px 5px @navbarBkgd;
+	border: solid 2px @navbarBkgd;
+	background-color: rgb(166, 166, 198);
 }
 
 .infoContainer span{
@@ -112,8 +111,3 @@ p {
 	font-weight: bold;
 	text-align: end;
 }
-
-router-outlet {
-	background-color: blue !important;
-}
-
