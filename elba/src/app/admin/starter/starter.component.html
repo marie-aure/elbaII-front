@@ -34,7 +34,7 @@
             </div>
             <div class="rowContainer scrollContainer">
                 <div class="scrollItem rowContainer wrap scroll" *ngIf="simListe">
-                    <div *ngFor="let sim of simListe" class="simContainer">
+                    <div *ngFor="let sim of (simListe | orderBy: 'id')" class="simContainer">
                         <app-detail [sim]="sim"></app-detail>
                     </div>
                 </div>

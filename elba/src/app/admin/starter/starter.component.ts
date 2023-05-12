@@ -26,9 +26,6 @@ export class StarterComponent implements OnInit {
 
   ngOnInit(): void {
     this.chargerListeGroupe();
-
-    //tmp
-    this.starterService.voirGroupe(0).subscribe(res => {this.simListe = res; this.sim = this.simListe[0]});
   }
 
   chargerListeGroupe(){
@@ -44,6 +41,7 @@ export class StarterComponent implements OnInit {
     let groupe:number = this.voirGroupeForm.value.numero || 0;
     this.starterService.voirGroupe(groupe).subscribe(res => {this.simListe = res; this.sim = this.simListe[0]});
   }
+
 
 
 }
