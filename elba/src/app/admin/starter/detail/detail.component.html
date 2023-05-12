@@ -1,0 +1,74 @@
+<div class="infoContainer" (click)="popUpNom()">
+    <div class="gridContainer">
+        <div class="labelContainer">
+            <p>
+                <span>Nom : </span>
+                <span>Genre : </span>
+                <span>Espèce : </span>
+                <span>Orientation : </span>
+                <span>Age : </span>
+                <span>Marié : </span>
+                <span>Conjoint : </span>
+                <span>Souhait : </span>
+                <span>Personnalité : </span>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <span>Aspect</span>
+                <span>Peau : </span>
+                <span>Poids : </span>
+                <span>Muscle : </span>
+                <span>Poitrine : </span>
+                <span>Cheveux (couleur) : </span>
+                <span>Visage : </span>
+                <span>Yeux (couleur) : </span>
+                <span>Nez : </span>
+                <span>Bouche : </span>
+                <br/>
+                <span>Préférence</span>
+                <span>Plat : </span>
+                <span>Musique : </span>
+                <span>Couleur : </span>
+                <span>Signe astrologique :</span>
+            </p>
+        </div>
+        <div>
+            <p>
+                <span>{{sim?.prenom}} {{sim?.nom}}</span>
+                <span>{{sim?.genre}}</span>
+                <span>{{sim?.espece}}</span>
+                <span>{{sim?.orientation}}</span>
+                <span *ngIf="sim?.decede">Décédé(e)</span>
+                <span *ngIf="!sim?.decede && sim?.adulte" >Adulte</span>
+                <span *ngIf="!sim?.decede && !sim?.adulte" >Jeune</span>
+                <span>{{sim?.marie ? 'Marié(e)' : 'Célibataire'}}</span>
+                <span >{{sim?.conjoint?.prenom || '-'}} {{sim?.conjoint?.nom || '-'}}</span>
+                <span>{{sim?.personnalite?.souhait}}{{sim?.souhaitRealise ? ' (Réalisé)' : ''}}</span>
+                <span>{{sim?.personnalite?.traitMental}}</span>
+                <span>{{sim?.personnalite?.traitPhysique}}</span>
+                <span>{{sim?.personnalite?.traitSocial}}</span>
+                <span>{{sim?.personnalite?.traitStyleVie}}</span>
+                <span>{{sim?.personnalite?.traitBonus}}</span>
+                <br/>
+                <br/>
+                <span>{{sim?.infoStarter?.peau}}</span>
+                <span>{{sim?.infoStarter?.poids}}</span>
+                <span>{{sim?.infoStarter?.muscle}}</span>
+                <span>{{sim?.infoStarter?.poitrine}}</span>
+                <span>{{sim?.infoStarter?.cheveux}} ({{sim?.infoStarter?.couleurCheveux}})</span>
+                <span>{{sim?.infoStarter?.visage}}</span>
+                <span>{{sim?.infoStarter?.yeux}} ({{sim?.infoStarter?.couleurYeux}})</span>
+                <span>{{sim?.infoStarter?.nez}}</span>
+                <span>{{sim?.infoStarter?.bouche}}</span>
+                <br/>
+                <br/>
+                <span>{{sim?.infoStarter?.plat}}</span>
+                <span>{{sim?.infoStarter?.musique}}</span>
+                <span>{{sim?.infoStarter?.couleur}}</span>
+                <span>{{sim?.infoStarter?.signe}}</span>
+            </p>
+        </div>
+    </div>
+</div>

@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDialogModule} from '@angular/material/dialog';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,7 +17,10 @@ import { StarterComponent } from './admin/starter/starter.component';
 import { TitreComponent } from './commun/titre/titre.component';
 import { FamilleComponent } from './main/composant/famille/famille.component';
 import { Famille2Component } from './main/composant/famille2/famille2.component';
-import { MatButtonModule } from '@angular/material/button'
+import { MatButtonModule } from '@angular/material/button';
+import { DetailComponent } from './admin/starter/detail/detail.component';
+import { CompleterStarterComponent } from './admin/starter/detail/completer-starter/completer-starter.component'
+import { OrderModule } from 'ngx-order-pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,9 @@ import { MatButtonModule } from '@angular/material/button'
     StarterComponent,
     TitreComponent,
     FamilleComponent,
-    Famille2Component
+    Famille2Component,
+    DetailComponent,
+    CompleterStarterComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +44,10 @@ import { MatButtonModule } from '@angular/material/button'
     BrowserAnimationsModule,
     FormsModule,
     MatInputModule,
+    MatSelectModule,
+    MatDialogModule,
     ReactiveFormsModule,
+    OrderModule,
     MatButtonModule
   ],
   providers: [  ],

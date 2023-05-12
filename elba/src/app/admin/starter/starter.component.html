@@ -1,4 +1,4 @@
-<div class="rowContainer">
+<div class="rowContainer fullHeight">
     <div class="section">
         <h2>Générer des starters</h2>
         <form [formGroup]="genererStarterForm" (ngSubmit)="genererStarterSubmit()">
@@ -10,7 +10,34 @@
                         placeholder="Nombre">
                 </mat-form-field>
             </p>
-             <button mat-raised-button type="submit"  [disabled]="!genererStarterForm.valid">Générer</button>
+            <button mat-raised-button type="submit" [disabled]="!genererStarterForm.valid">Générer</button>
         </form>
     </div>
-</div>
+    <div class="section" style="flex:1">
+        <div class="colContainer" style="overflow: auto;">
+            <div>
+                <h2>Voir le groupe</h2>
+                <form [formGroup]="voirGroupeForm" (ngSubmit)="voirGroupeSubmit()">
+                    <p>
+                        <label for="numero">Numero * : </label>
+                        <mat-form-field appearance="legacy">
+                            <mat-label>Numéro</mat-label>
+                            <mat-select formControlName="numero">
+                                <mat-option *ngFor="let groupe of groupes" value="{{groupe}}">
+                                    {{groupe}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </p>
+                    <button mat-raised-button type="submit" [disabled]="!voirGroupeForm.valid">Valider</button>
+                </form>
+            </div>
+            <div class="rowContainer scrollContainer">
+                <div class="scrollItem rowContainer wrap scroll" *ngIf="simListe">
+                    <div *ngFor="let sim of (simListe | orderBy: 'id')" class="simContainer">
+                        <app-detail [sim]="sim"></app-detail>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
