@@ -25,4 +25,8 @@ export class StarterService {
   voirGroupe(numero: number | undefined): Observable<Sim[]> {
     return this.httpClient.get<Sim[]>(`http://localhost:8078/api/starter/groupe/${numero}`);
   }
+
+  transformerGroupe(numero: number | undefined) {
+    return this.httpClient.post(`http://localhost:8078/api/starter/transformer-groupe/${numero}`,null);
+  }
 }
