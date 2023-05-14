@@ -50,7 +50,7 @@ import { OrderModule } from 'ngx-order-pipe';
     OrderModule,
     MatButtonModule
   ],
-  providers: [  ],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
