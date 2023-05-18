@@ -1,5 +1,6 @@
 @import "~@angular/material/prebuilt-themes/purple-green.css";
 @import "./variables.less";
+@import "./form.less";
 
 // default html elements
 html,
@@ -21,7 +22,8 @@ h1 {
 	font-family: Verdana;
 	font-style: italic !important;
 	font-size: 60px;
-	background-image: linear-gradient(to right,rgba(255,255,255,0) 10%,rgba(255,255,255,0.3),rgba(255,255,255,0) 90%);
+	color: @fontColor;
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 90%);
 }
 
 hr {
@@ -29,21 +31,21 @@ hr {
 	padding: 0px;
 	height: 2px;
 	border: none;
-	background-image: linear-gradient(to right,rgba(255,255,255,0) 10%,@navbarBkgd ,rgba(255,255,255,0) 90%);
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 10%, @navbarBkgd , rgba(255, 255, 255, 0) 90%);
 }
 
-/*h2{
+h2 {
 	margin: 0px;
 	padding: 10px;
 	text-align: left;
-	font-family: Verdana; 
+	font-family: Verdana;
 	font-style: italic;
 	font-size: larger;
-	color: rgb(77, 77, 77);
+	color: @fontColor;
 }
 
 p {
-    margin: 0;-
+    margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
@@ -51,7 +53,7 @@ p {
 	line-height: 25px;
     vertical-align: baseline;
 	background: transparent;
-}*/
+}
 
 // flexbox
 .colContainer {
@@ -67,9 +69,50 @@ p {
 }
 
 .stretch {
-	flex:1;
+	flex: 1 1;
 }
 
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// section
+.section {
+	background-color: rgba(255, 255, 255, 0.4);
+	margin: 5px;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.infoContainer {
+	border-radius: 5px;
+	border: solid @navbarBkgd 2px;
+	margin: 5px;
+	padding: 15px;
+	color: @fontColor;
+	background-color: @composantBkgd;
+}
+
+.infoContainer:hover{
+	//background-color: rgb(248, 237, 237);
+	box-shadow: 1px 1px 5px @navbarBkgd;
+	border: solid 2px @navbarBkgd;
+	background-color: rgb(166, 166, 198);
+}
+
+.infoContainer span{
+	display: block;
+}
+
+.gridContainer{
+	display: flex;
+	justify-content: flex-start;
+	gap: 10px;
+}
+
+.labelContainer{
+	font-weight: bold;
+	text-align: end;
+}
+
+mat-dialog-container {
+  background-color: rgb(166, 166, 198) !important;
+  border-radius: 5px !important;
+}

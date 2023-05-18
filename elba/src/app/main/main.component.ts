@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { HelloServiceService } from '../service/hello-service.service';
 
 @Component({
   selector: 'app-main',
@@ -11,8 +10,7 @@ export class MainComponent implements OnInit {
 
   titre: any;
 
-  constructor(private readonly router: Router, private readonly route: ActivatedRoute,
-    private hello:HelloServiceService) { }
+  constructor(private readonly router: Router, private readonly route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.titre = this.route.firstChild?.routeConfig?.title;
@@ -21,7 +19,6 @@ export class MainComponent implements OnInit {
         this.titre = this.route.firstChild?.routeConfig?.title;
       }
     });
-    this.hello.getHello().subscribe(res => console.log(res));
   }
 
 }

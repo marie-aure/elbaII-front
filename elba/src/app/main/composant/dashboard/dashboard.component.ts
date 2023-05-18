@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { HelloServiceService } from 'src/app/service/hello-service.service';
 
 @Component({
   selector: 'app-dashboard',
