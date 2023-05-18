@@ -18,6 +18,10 @@ export class StarterComponent implements OnInit {
     numero: new FormControl<number|null>(null,Validators.required)
   });
 
+  transformerGroupeForm = new FormGroup({
+    numero: new FormControl<number|null>(null,Validators.required)
+  });
+
   groupes?:number[];
   sim?:Sim;
   simListe?:Sim[];
@@ -42,6 +46,10 @@ export class StarterComponent implements OnInit {
     this.starterService.voirGroupe(groupe).subscribe(res => {this.simListe = res; this.sim = this.simListe[0]});
   }
 
+  transformerGroupeSubmit(){
+    let groupe:number = this.transformerGroupeForm.value.numero || 0;
+    this.starterService.transformerGroupe(groupe).subscribe();
+  }
 
 
 }
