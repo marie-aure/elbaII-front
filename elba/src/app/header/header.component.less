@@ -2,19 +2,21 @@
 
 .navbar {
     background-color: @navbarBkgd;
+    display: flex;
     border: solid 1px black;
-    box-shadow: 0px 1px 5px black;
+    box-shadow: 0px 1px 5px darkblue;
 	height: 35px;
+    flex-direction: row;
 }
    .navbar-center {
     background-color: @navbarCenterBkgd;
-    height: 60px;
+    height: 44px;
     position: relative;
-    width: 80%;
     margin: auto;
     z-index: 100;
-    box-shadow: 0px 1px 6px black;
+    box-shadow: 0px 1px 6px rgb(43, 43, 43);
     border-radius: 5px;
+    flex: 0 1 90%;
 }
 
 .navbar-center::before {
@@ -30,7 +32,7 @@
     transform-origin: bottom right;
     transform: skew(30deg, 0deg);
     border-radius: 5px;
-    box-shadow: 0px 1px 6px black;
+    box-shadow: 0px 1px 6px rgb(43, 43, 43);
 }
 
 .navbar-center::after {
@@ -46,5 +48,37 @@
     transform-origin: bottom left;
     transform: skew(-30deg, 0deg);
     border-radius: 5px;
-    box-shadow: 5px 1px 3px black;
+    box-shadow: 5px 1px 3px rgb(43, 43, 43);
+}
+
+.segment{
+    color: @composantBkgd;
+    padding: 5px 10px;
+    text-align: center;
+    flex:0 1 200px;
+    font-family: Verdana;
+    font-weight: bold;
+    vertical-align: baseline;
+}
+
+.button:hover{
+    background-color:  rgb(63, 63, 170);
+  // text-decoration: overline underline;
+}
+
+.segment-center{
+    color: @fontColor;
+    padding: 8px 10px;
+    text-align: center;
+    flex:0 1 200px;
+    font-family: Verdana;
+    font-weight: bold;
+    border-radius: 5px;
+    vertical-align: baseline;
+}
+
+.button-center:hover{
+    background-color: rgb(106, 106, 152);
+    color: @composantBkgd;
+  // text-decoration: overline underline;
 }
