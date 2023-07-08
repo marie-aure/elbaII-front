@@ -1,3 +1,15 @@
 <div class="navbar">
-    <div class="navbar-center">navbar-center</div>
+    <div class="segment rowContainer" style="justify-content: space-evenly;">
+        <div><img src="assets/images/logo.png" /></div>
+        <div>ELBA CITY</div>
+        <div></div>
+    </div>
+    <div *ngIf="!isAdmin" class="navbar-center">gestion {{isAdmin}}</div>
+    <!-- NAVBAR ADMIN -->
+    <div *ngIf="isAdmin"  class="navbar-center rowContainer">
+        <div class="segment-center button-center"><a href="/admin/starter">Gestion des starters</a></div>   
+        
+    </div>
+    <div *ngIf="!isAdmin" class="segment button"><a href="/admin">Administration</a></div>
+    <div *ngIf="isAdmin" class="segment button"><a  href="/">Gestion</a></div>
 </div>

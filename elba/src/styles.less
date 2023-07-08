@@ -10,9 +10,10 @@ body {
 	padding: 0;
 	font-family: Roboto, "Helvetica Neue", sans-serif;
 	vertical-align: baseline;
-	background: url('assets/images/fond3.png') no-repeat;
+	background-color: @bkgd;
+	/* 	background: url('assets/images/fond3.png') no-repeat;
 	background-position: center;
-	background-size: cover;
+	background-size: cover; */
 }
 
 h1 {
@@ -39,25 +40,72 @@ h2 {
 	padding: 10px;
 	text-align: left;
 	font-family: Verdana;
-	font-style: italic;
 	font-size: larger;
+	color: @fontColor;
+}
+h3 {
+	margin: 0px;
+	padding: 10px;
+	text-align: left;
+	font-family: Verdana;
+	font-style: italic!important;
+	font-size: large;
 	color: @fontColor;
 }
 
 p {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
 	line-height: 25px;
-    vertical-align: baseline;
+	vertical-align: baseline;
 	background: transparent;
 }
 
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+
+//TABLE
+ table{
+	border-radius: 5px;
+	border: solid @navbarBkgd 2px;
+	background-color: transparent !important;
+	margin:5px;
+}
+table:hover{
+	background-color: @composantHover!important;
+	box-shadow: 1px 1px 5px @navbarBkgd;
+	border: solid 2px @navbarBkgd;
+}
+
+th{
+	color: @fontColor !important;
+	font-weight: bold!important;
+	border-bottom: solid @navbarBkgd 1px !important;
+	padding: 5px!important;
+}
+
+
+td{
+	color: @fontColor !important;
+	padding: 5px!important;
+}
+
 // flexbox
-.colContainer {
+.colContainerMain {
 	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.colContainer {
+
 
 	display: flex;
 	flex-direction: column;
@@ -75,7 +123,7 @@ p {
 
 // section
 .section {
-	background-color: rgba(255, 255, 255, 0.4);
+	background-color: @composantBkgd;
 	margin: 5px;
 	padding: 10px;
 	border-radius: 5px;
@@ -90,29 +138,36 @@ p {
 	background-color: @composantBkgd;
 }
 
-.infoContainer:hover{
-	//background-color: rgb(248, 237, 237);
+.infoContainer:hover {
 	box-shadow: 1px 1px 5px @navbarBkgd;
 	border: solid 2px @navbarBkgd;
-	background-color: rgb(166, 166, 198);
+	background-color: @composantHover;
 }
 
-.infoContainer span{
+.infoContainer span {
 	display: block;
 }
 
-.gridContainer{
+.gridContainer {
 	display: flex;
 	justify-content: flex-start;
 	gap: 10px;
 }
 
-.labelContainer{
+.labelContainer {
 	font-weight: bold;
 	text-align: end;
 }
 
 mat-dialog-container {
-  background-color: rgb(166, 166, 198) !important;
-  border-radius: 5px !important;
+	background-color: rgb(166, 166, 198) !important;
+	border-radius: 5px !important;
+}
+
+.sur-section {
+	background-color: @bkgd;
+	margin: 5px;
+	//border-radius: 0px;
+	//padding-left: 10px;
+	//margin: 5px 0px 5px 0px;
 }

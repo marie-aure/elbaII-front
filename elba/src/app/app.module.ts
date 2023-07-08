@@ -20,6 +20,7 @@ import { Famille2Component } from './main/composant/famille2/famille2.component'
 import { MatButtonModule } from '@angular/material/button';
 import { DetailComponent } from './admin/starter/detail/detail.component';
 import { CompleterStarterComponent } from './admin/starter/detail/completer-starter/completer-starter.component'
+import { MatTableModule } from "@angular/material/table";
 import { OrderModule } from 'ngx-order-pipe';
 
 @NgModule({
@@ -48,7 +49,8 @@ import { OrderModule } from 'ngx-order-pipe';
     MatDialogModule,
     ReactiveFormsModule,
     OrderModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule
   ],
   providers: [ ],
   bootstrap: [AppComponent]

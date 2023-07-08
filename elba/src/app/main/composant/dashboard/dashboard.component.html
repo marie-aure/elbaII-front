@@ -1,6 +1,81 @@
-<div class="colContainer">
-    <div class="stretch dashboard">dashboard
-        <div (click)="toFamille()">famille</div>
-        <div (click)="toFamille2()">famille2</div>
+<div class="colContainerMain">
+    <div class="stretch dashboard">
+        <h2>Famille active</h2>
+        <div class="colContainer">
+            <h3>Informations</h3>
+            <div class="infoContainer">
+                <div class="gridContainer">
+                    <div class="labelContainer">
+                        <p>
+                            <span>Nom : </span>
+                            <span>Génération : </span>
+                            <span>Caste :</span>
+                            <span>Chef(fe) de famille :</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <span>{{familleActive?.nom}}</span>
+                            <span>{{familleActive?.generation}}</span>
+                            <span>{{familleActive?.classe?.libelle}}</span>
+                            <span>{{familleActive?.chef?.prenom}} {{familleActive?.chef?.nom}} ({{familleActive?.chef?.conjoint?.prenom}} {{familleActive?.chef?.conjoint?.nom}})</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Membres</h3>
+            <table mat-table [dataSource]="membres" class="info-table">
+                <ng-container matColumnDef="nom">
+                    <th mat-header-cell *matHeaderCellDef> Nom </th>
+                    <td mat-cell *matCellDef="let sim"> {{sim.prenom}} {{sim.nom}} </td>
+                </ng-container>
+                <ng-container matColumnDef="genre">
+                    <th mat-header-cell *matHeaderCellDef> Genre </th>
+                    <td mat-cell *matCellDef="let sim"> {{sim.genre}} </td>
+                </ng-container>
+                <ng-container matColumnDef="espece">
+                    <th mat-header-cell *matHeaderCellDef> Espèce </th>
+                    <td mat-cell *matCellDef="let sim"> {{sim.espece}} </td>
+                </ng-container>
+                <ng-container matColumnDef="age">
+                    <th mat-header-cell *matHeaderCellDef> Age </th>
+                    <td mat-cell *matCellDef="let sim"> {{sim.adulte? 'Adulte' : 'Jeune'}}</td>
+                </ng-container>
+                <ng-container matColumnDef="orientation">
+                    <th mat-header-cell *matHeaderCellDef> Orientation </th>
+                    <td mat-cell *matCellDef="let sim"> {{sim.orientation}} </td>
+                </ng-container>
+                <ng-container matColumnDef="conjoint">
+                    <th mat-header-cell *matHeaderCellDef> Conjoint </th>
+                    <td mat-cell *matCellDef="let sim"> {{sim.conjoint?.prenom}} {{sim.conjoint?.nom}} </td>
+                </ng-container>
+               
+                <tr mat-header-row *matHeaderRowDef="colonnesMembres"></tr>
+                <tr mat-row *matRowDef="let membres; columns: colonnesMembres"></tr>
+            </table>
+
+            <h3>Finances</h3>
+            <div class="infoContainer">
+                <div class="gridContainer">
+                    <div class="labelContainer">
+                        <p>
+                            <span>Argent IG : </span>
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <span>{{familleActive?.argentIG}}</span>
+                        </p>
+                    </div>
+                </div>
+            </div> 
+
+            <h3>Propriétés</h3>
+            <p>Coming soon</p>
+
+            <h3>Evolution</h3>
+            <p>Coming soon</p>
+        </div>
     </div>
 </div>
