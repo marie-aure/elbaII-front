@@ -22,6 +22,7 @@ import { DetailComponent } from './admin/starter/detail/detail.component';
 import { CompleterStarterComponent } from './admin/starter/detail/completer-starter/completer-starter.component'
 import { MatTableModule } from "@angular/material/table";
 import { OrderModule } from 'ngx-order-pipe';
+import { ChangementTourComponent } from './main/composant/changement-tour/changement-tour.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { OrderModule } from 'ngx-order-pipe';
     FamilleComponent,
     Famille2Component,
     DetailComponent,
-    CompleterStarterComponent
+    CompleterStarterComponent,
+    ChangementTourComponent
   ],
   imports: [
     BrowserModule,

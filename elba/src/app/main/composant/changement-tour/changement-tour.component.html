@@ -1,0 +1,13 @@
+<div class="section colContainer">
+    <h3>Terminer le tour</h3>
+    <form [formGroup]="finTourForm" (ngSubmit)="validerFinDuTour()">
+        <p>
+            <label for="argentIG">Argent IG * : </label>
+            <mat-form-field appearance="legacy">
+                <mat-label>Argent IG</mat-label>
+                <input id="argentIG" type="number" matInput formControlName="argentIG" placeholder="Nombre">
+            </mat-form-field>
+        </p>
+        <button mat-raised-button type="submit" [disabled]="!finTourForm.valid">Valider</button>
+    </form>
+</div>
